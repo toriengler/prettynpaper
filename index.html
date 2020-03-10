@@ -11,11 +11,11 @@
     <title>Pretty in Paper, LLC</title>
 </head>
 <body>  
-    <div class="skip" > <a href="#logo">Skip to Main Content</a></div>
+    <div class="skip" > <a href="#skip">Skip to Main Content</a></div>
     <header>
     <nav class='top'>
         <ul class='navigate'>
-            <li class="nav_item"><a href="#skip">Home</a></li>
+            <li class="nav_item"><a href="#skip" id='current'>Home</a></li>
             <li class="nav_item"><a href="offers.html">Special Offers</a></li>
             <li class="nav_item"><a href="gallery.html">Gallery</a></li>
             <li class="nav_item"><a href="testimonials.html">Testimonials</a></li>
@@ -39,7 +39,7 @@
         <p>Pretty in Paper, LLC is a full service invitation company that helps you create the perfect invitation for your special event. We will walk you through the process from beginning to end scrutinizing every detail for perfection. Beginning with the Save the Date; let your guests know they will be included. <br>
          We will then create the perfect Invitation to fit your style, theme and budget. Choose from our vast selection of invitation books or let’s sit down and create something unique. </p>
          <br>
-         <button><a href="testimonials.html">Testimonials</a></button>
+         <button onclick="window.location.href = 'testimonials.html';">Click Here</button>
     </div>
         <div class= 'services-pic'>
             <img src="images/weldoninvite.jpg" alt="servicces" id='servpic'>
@@ -48,7 +48,7 @@
             <h1>What We Do</h1>
             <p>Pretty in Paper, LLC offers anything from <b>custom</b> notepads, business cards, and event invitations to party favors, clothing, and more. From the <b>Save the Date</b> to the <b> Thank You note</b> , we can do it all, any way that you'd like! </p>
             <br>
-        <button><a href="offers.html">Current Deals</a></button>
+        <button onclick="window.location.href = 'offers.html';">Current Deals</button>
         </div>
         <div class='prod-pic'>
             <img src="images/jax9.jpg" alt="jacksonfletch" id='jaxpic'>
@@ -57,24 +57,47 @@
             <h1>Products</h1>
             <p>Check out the Gallery to see what we have and what we can do for you and your party. Here you will find anything from invitations and notepads to thank you cards...in addition to a few of the many vendors with whom we work.</p>
             <br>
-            <button><a href="gallery.html">Check It Out</a></button>
+            <button onclick="window.location.href = 'gallerry.html';">Gallery</button>
         </div>
 
-    </div>
 </main>
 <footer>
     <div class='contact'>
         <h1>Contact Us</h1>
         <p>Phone: 561-998-3777</p>
-        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a></p>
+        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a><br><br></p>
     </div>
         
     <div class='address'>
         <h1>Location</h1>
         <p>7805 NW Beacon Square BLVD
         <br> Boca Raton, FL 33487</p>
-        <p class='plug'>Web Creation and Design by Victoria Engler</p>
+        <p class='plug'>Web Creation and Design by <b>Victoria Engler</b><br><br></p>
     </div>
+    <a href="" id='flip'>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"> 
+                <h2>Fill Out This Form to Inquire About An Appointment!</h2>  
+            </div>
+                <div class="flip-card-back">
+                <form action="https://formspree.io/mzbglzpg" method="POST">
+                <fieldset>
+                <legend>Appointment Inquiry Form</legend>
+                
+                 <div class = "info">
+                    <label for ="name">Name:</label><input type="text" id='name' name="name" /> 
+                    <label for ="phone">Phone Number:</label><input type="text" id="phone" name ="phone" required/> 
+                    <label for ="message">Message:</label><textarea id = "message" ></textarea>
+                </div>
+                <input type="submit" value=" Submit Form"/>
+            </fieldset>     
+            </form>
+                  
+                </div>
+            </div>
+          </div>
+          </a>
 </footer>
 </body>
 </html>

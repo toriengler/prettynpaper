@@ -11,13 +11,13 @@
     <title>Pretty in Paper, LLC</title>
 </head>
 <body>  
-    <div class="skip" > <a href="#logo">Skip to Main Content</a></div>
+    <div class="skip" > <a href="#skip">Skip to Main Content</a></div>
     <header>
     <nav class='top'>
         <ul class='navigate'>
             <li class="nav_item"><a href="index.html">Home</a></li>
             <li class="nav_item"><a href="offers.html">Special Offers</a></li>
-            <li class="nav_item"><a href="#skip">Gallery</a></li>
+            <li class="nav_item"><a href="#skip" id='current'>Gallery</a></li>
             <li class="nav_item"><a href="testimonials.html">Testimonials</a></li>
         </ul>
     </nav>
@@ -31,9 +31,9 @@
             </ul>
             </div>
         </div>
-    <h1 id='galhead'>Gallery</h1>
+        <h1 id='galhead'>Gallery</h1>
     <section class="gallery">
-  
+        <h2>Gallery</h2>
       <img id="image1" src="images/charu/blakejonah.jpg" alt="blakejonah" />
       <img id="image2" src="images/trifecta.jpg" alt="trifecta" />
       <img id="image4" src="images/jax9.jpg" alt="jax9" />
@@ -50,15 +50,39 @@
     <div class='contact'>
         <h1>Contact Us</h1>
         <p>Phone: 561-998-3777</p>
-        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a></p>
+        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a><br><br></p>
     </div>
         
     <div class='address'>
         <h1>Location</h1>
         <p>7805 NW Beacon Square BLVD
         <br> Boca Raton, FL 33487</p>
-        <p class='plug'>Web Creation and Design by Victoria Engler</p>
+        <p class='plug'>Web Creation and Design by <b>Victoria Engler</b><br><br></p>
     </div>
+    <a href="" id='flip'>
+    <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front"> 
+                    <h2>Fill Out This Form to Inquire About An Appointment!</h2>  
+                </div>
+                    <div class="flip-card-back">
+                    <form action="https://formspree.io/mzbglzpg" method="POST">
+                    <fieldset>
+                    <legend>Appointment Inquiry Form</legend>
+                    
+                     <div class = "info">
+                        <label for ="name">Name:</label><input type="text" id='name' name="name" /> 
+                        <label for ="phone">Phone Number:</label><input type="text" id="phone" name ="phone" required/> 
+                        <label for ="message">Message:</label><textarea id = "message" ></textarea>
+                    </div>
+                    <input type="submit" value=" Submit Form"/>
+                    
+                    </fieldset>
+                </form>   
+                    </div>
+                </div>
+              </div>
+              </a>
 </footer>
 </body>
 </html>

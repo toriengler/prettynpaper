@@ -11,14 +11,14 @@
     <title>Pretty in Paper, LLC</title>
 </head>
 <body>  
-    <div class="skip" > <a href="#logo">Skip to Main Content</a></div>
+    <div class="skip" > <a href="#skip">Skip to Main Content</a></div>
     <header>
     <nav class='top'>
         <ul class='navigate'>
             <li class="nav_item"><a href="index.html">Home</a></li>
             <li class="nav_item"><a href="offers.html">Special Offers</a></li>
             <li class="nav_item"><a href="gallery.html">Gallery</a></li>
-            <li class="nav_item"><a href="#skip.html">Testimonials</a></li>
+            <li class="nav_item"><a href="#skip.html" id='current'>Testimonials</a></li>
         </ul>
     </nav>
     </header>
@@ -31,20 +31,66 @@
             </ul>
             </div>
         </div>
+        <section id='test'>
+        <div id='t-1' class='t-pic'>
+            <h2>Mara</h2>
+            <img src="images/t-1.jpg" alt="mara">
+            <p>"Thank us??? Thank you for everything!!!! You are truly the best!!! From the invites, favors, napkins and everything else you are the best!!'</p>
+        </div>
+        <div id='best' class='t-pic'>
+            <h2>Best in Boca Award</h2>
+            <img src="images/bestinboca.png" alt="award">
+            <p>In 2019, Pretty In Paper, LLC was award the Best in Boca Award! For over 10 years, we have been producing some of the best invitations in Boca. Previously, we have been featured on popular event blog, Mitzvah Market, and can be found in a variety of other media throughout the US!</p>
+        </div>
+        <div id='jax' class='t-pic'>
+            <h2>Weinstein Family</h2>
+            <img src="images/jax9.jpg" alt="jackson">
+            <p>"We can't say enough about Pretty in Paper! When looking for our sons bar mitzvah invitation we gave her a theme and simply said we want different - she crushed it! We had never seen anything like it and the invite truly spoke to who our son is - it felt uniquely us! The service was exceptional - she focused us, kept us organized and even when we were not quick with answers she was still able to deliver our order on time and they were perfect. She stayed on top of vendors and we felt like she truly had our backs. If you are looking for invites that will set the tone for your event and service where you never feel like just another customer you should run to hire Pretty in Paper."</p>
+        </div>
+        <div id='lily' class='t-pic'>
+            <h2>Tim and Lily</h2>
+            <img src="images/weldoninvite.jpg" alt="weldon">
+            <p>"Stephanie is a true professional and thinks outside the box. Her customer service is exemplary. She went above and beyond the call of duty in designing, printing, putting together our bridal shower invites, bride and groom personalized stationary, wedding invitations, guests welcome brochures, ceremony programs, menus and escort cards. Everything was beyond our wildest dreams and customized to perfection. Thank you Stephanie for assisting in making our family’s wedding absolutely beautiful. "</p>
+        </div>
+        </section>
 </main>
 <footer>
     <div class='contact'>
         <h1>Contact Us</h1>
         <p>Phone: 561-998-3777</p>
-        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a></p>
+        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a><br><br></p>
     </div>
         
     <div class='address'>
         <h1>Location</h1>
         <p>7805 NW Beacon Square BLVD
         <br> Boca Raton, FL 33487</p>
-        <p class='plug'>Web Creation and Design by Victoria Engler</p>
+        <p class='plug'>Web Creation and Design by <b>Victoria Engler</b><br><br></p>
     </div>
+    <a href="" id='flip'>
+    <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front"> 
+                    <h2>Fill Out This Form to Inquire About An Appointment!</h2>  
+                </div>
+                    <div class="flip-card-back">
+                    <form action="https://formspree.io/mzbglzpg" method="POST">
+                    <fieldset>
+                    <legend>Appointment Inquiry Form</legend>
+                    
+                     <div class = "info">
+                        <label for ="name">Name:</label><input type="text" id='name' name="name" /> 
+                        <label for ="phone">Phone Number:</label><input type="text" id="phone" name ="phone" required/> 
+                        <label for ="message">Message:</label><textarea id = "message" ></textarea>
+                    </div>
+                    <input type="submit" value=" Submit Form"/>
+                    
+                    </fieldset> 
+                </form>  
+                    </div>
+                </div>
+              </div>
+            </a>
 </footer>
 </body>
 </html>

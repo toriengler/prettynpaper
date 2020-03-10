@@ -6,49 +6,44 @@ body{
   display: grid;
 }
 
-.top{
-  display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-    flex-wrap: wrap;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-  align-items: center;
-  justify-content: space-between;
-}
 
 header{
   border-bottom: 10px solid rgb(194, 26, 82);
 }
 
-
-.navigate, nav a{
+nav ul{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column
+}
+
+header, nav a{
     font-family: Arial, Helvetica, sans-serif;
+    color:black;
     font-size: 17px;
     text-align: center;
   padding: 10px;
-  color:black;
     font-weight: bold;
     text-decoration: none;
     justify-content: space-evenly
 }
-main h1 {
+
+header a:hover, header a:active, .footlink:hover, button:hover {
+  color:rgb(197, 55, 197);
+  text-decoration: underline;
+  opacity: .8
+  ;}
+
+main h1, .t-pic >h2{
   text-align: left;
   font-weight: bold;
+  text-shadow: -1px 2px 3px #363636;
   padding: 5px;
   font-family:'Petit Formal Script', cursive;
   font-size: 1.5em
 }
 
-main p{
+main p, legend {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   font-size: 1em
@@ -78,9 +73,6 @@ main p{
   opacity: .8;
 }
 
-nav a:active {
-  color:purple
-}
 
 .skip a{
     background: white;
@@ -103,18 +95,17 @@ nav a:active {
   }
 
   @-webkit-keyframes logo_grow{
-    from{width:15px}
-    to{width:420px}
+    0% {opacity:0}
+    100% {opacity:1}
   }
   
   @keyframes logo_grow{
-    from{width:15px}
-    to{width:420px}
+    0% {opacity:0}
+    100% {opacity:1}
   } 
   
 
-
-.container{
+.container, .o-container{
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(5x auto);
@@ -123,6 +114,9 @@ nav a:active {
   grid-column: 1/-1;
   justify-content: center
 }
+.o-container{
+  grid-template-columns: 1fr 1fr;
+}
 
 .logo{
   background-image: url('../images/pretty-logo.png');
@@ -130,13 +124,19 @@ nav a:active {
   grid-column: 1 / span 3;
   background-position: center;
   background-repeat: no-repeat;
+  animation: logo_grow ease 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
+#current{
+  color: purple
+}
 
 .descript, .services, .products{
   grid-column: 1/ -1;
-
 }
+
 
 .descript-pic img, .services-pic img, .prod-pic img{
   max-width: -webkit-fill-available;
@@ -150,15 +150,27 @@ nav a:active {
   overflow: hidden;
 }
 
-.descript, .descript-pic, .canasta, .canasta-pic{
+.descript, .descript-pic, .canasta, .canasta-pic, #t-1{
   grid-row: 2/ span 1;
 }
 
-.services-pic, .services, .wine, .wine-pic{
+.services-pic, .services, .wine, .wine-pic, #best{
   grid-row: 3/ span 1
 }
-.products, .prod-pic, .cards{
+.products, .prod-pic, .cards, #jax{
   grid-row: 4/span 1
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  grid-column: 1/-1;
+}
+
+
+.lily{
+  grid-row: 5/ span 1
 }
 
 .text{
@@ -174,16 +186,13 @@ button{
   border-radius: 2px;
   border:  2px solid rgb(194, 26, 82);
   background-color: rgb(194, 26, 80);
-}
-
-button a{
   color: white;
-  text-decoration: none;
   font-size: 15px
 }
 
 
-.cards>img, .gallery{
+
+.gallery{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +210,15 @@ button a{
           
 }
 
-#offerpic, .gallery >img{
+
+.canasta-pic, .wine-pic{
+  grid-column: 1/span 1
+}
+.canasta, .wine{
+  grid-column: 2/span 1
+}
+
+.offerpic, .gallery >img{
   margin: 10px;
   max-width: 400px;
   box-shadow: 0px 0px 5px 5px rgb(212, 41, 135)
@@ -218,6 +235,7 @@ button a{
   font-size: 20px
 }
 
+
 .gallery{
   min-height: 600px;
   -webkit-box-align: start;
@@ -226,23 +244,50 @@ button a{
       grid-row: 3/span 2;
       
 }
-#galhead{
+#galhead, .t-pic, .t-pic>h2{
   text-align: center
 
 }
-.gallery> img{
+
+.gallery > img:hover{
+  filter: opacity(.8)
+}
+
+.gallery> img, .t-pic>img{
   margin: 10px;
   max-width: 400px;
-  max-height: 400px
+  max-height: 400px;
+}
+#jax, #lily, #best{
+  padding-top: 20px;
+  padding-bottom: 10px
+}
 
+.t-pic > img{
+  box-shadow: 0px 0px 5px 5px rgb(145, 141, 141)
+}
 
+.gallery > h2{
+  display: none
+}
+#test{
+background-image: url('../images/granite.jpg'); /*parallax*/
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.t-pic>p{
+  text-align: center;
+  margin: 15px 35px 15px 35px;
 }
 
 
 /*footer related*/
 footer {
-  display: grid;
-  grid-template-rows: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   background: black;
   color: white;
   border-top: 10px solid rgb(194, 26, 82);
@@ -251,39 +296,134 @@ footer {
 
 footer h1, h2, h3, p {
   text-align: center;
-  padding: 1px;
-  font-family: Arial, Helvetica, sans-serif
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.contact{
-  grid-row: 1
-}
-.address{
-  grid-row: 3
-}
-
-.footlink{
+.footlink:link{
   color: aliceblue
 }
 
-.footlink:hover, button:hover{
-  opacity: .8
+
+.flip-card {
+  background-image: url(../images/granite.jpg);
+  position:relative;
+  width: 300px;
+  height: 200px;
+  padding: 15px 15px;
+  border-radius: 10%
 }
 
-.plug {
-  font-weight: bold
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner, .flip-card-back {
+  transform: rotateY(180deg);
+}
+#flip:focus .flip-card-inner, .flip-card-back {
+  transform: rotateY(180deg);
+} 
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+}
+
+.flip-card-front {
+  background:transparent;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/pnp_logo.jpeg');
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: bottom
+  
+}
+
+
+.flip-card-back, .flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+
+legend{ 
+  text-align: center;
+  font-size: 15px;
+  font-variant-caps: small-caps; 
+  padding: 20px 20px
+}
+
+fieldset{
+  border: 2px solid black;
+  border-radius: 5%
+
+}
+
+.info{
+  display: inline-grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-row-gap: 10px;
+}  
+
+input:focus {
+  border: 2px solid black;
+  background: #ccccca}
+
+input[type=submit]{
+  border: 1px solid black;
+  width: 100px;
+  vertical-align: sub;
+  border-radius: 5px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background: rgba(196, 194, 194, 0.89)
+}
+
+input, textarea, select{
+  background-color:#FFFFFF;
 }
 
 @media screen and (prefers-reduce-motion: reduce){
-  #logo {
-    -webkit-animation: none;
-    animation: none
+  .gallery > img:hover{
+    filter: none
+  }
+  .logo{
+    animation: none;
   }
 }
 
-@media screen and (min-width: 750px){
-  .gallery{
-    display: inline-flex
+@media screen and ( max-width: 800px) and (min-width: 650px){
+  nav ul, .cards{
+    flex-direction: row
   }
- 
 }
+
+@media screen and (min-width: 800px){
+  main{
+    zoom:120%;
+  }
+
+  .gallery> img, .t-pic>img{
+    margin: 10px;
+    max-width: 500px;
+    max-height: 300px;
+  }
+  nav ul, .cards{
+    flex-direction: row;
+    
+  }
+
+}
+ 

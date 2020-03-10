@@ -11,18 +11,18 @@
     <title>Pretty in Paper, LLC</title>
 </head>
 <body>  
-    <div class="skip" > <a href="#logo">Skip to Main Content</a></div>
+    <div class="skip" > <a href="#skip">Skip to Main Content</a></div>
     <header>
     <nav class='top'>
         <ul class='navigate'>
             <li class="nav_item"><a href="index.html">Home</a></li>
-            <li class="nav_item"><a href="#skip">Special Offers</a></li>
+            <li class="nav_item"><a href="#skip" id='current'>Special Offers</a></li>
             <li class="nav_item"><a href="gallery.html">Gallery</a></li>
             <li class="nav_item"><a href="testimonials.html">Testimonials</a></li>
         </ul>
     </nav>
     </header>
-    <main class='container' id=skip> 
+    <main class='o-container' id=skip> 
         <div class='logo'>
             <div class='media_links'>
             <ul>    
@@ -32,7 +32,7 @@
             </div>
         </div>
     <div class='canasta-pic'>
-        <img src="images/canastapad.jpg" alt="canasta deal" id='offerpic'>
+        <img src="images/canastapad.jpg" alt="canasta deal" class='offerpic'>
     </div>
     <div class='canasta deal'> 
         <p>1 large Canasta or Bridge pad with 100 sheets (8x11): <br><br><b>$44</b> <br>
@@ -41,7 +41,7 @@
             <br>2 pads with 100 sheets (5x7): <br><br><b>$52</b> each</p>
     </div>
     <div class='wine-pic'>
-        <img src="images/winetag.jpg" alt="wine pic" id=offerpic>
+        <img src="images/winetag.jpg" alt="wine pic" class='offerpic'>
     </div>
     <div class='wine deal'>
         <p>Wine Tags for any occasion: <br><br><b> 18</b>for <b>$36</b></p>
@@ -49,32 +49,49 @@
     
     <div class="cards"> 
         <p>Check Cards & Envelopes: <b>18 </b>for <b>$36</b></p>
-        <img src="images/checkcard1.png" alt="card1" id='offerpic'>
-        <img src="images/checkcard2.png" alt="card2" id='offerpic'>
-        <img src="images/checkcard4.jpg" alt="card4" id='offerpic'>
+        <img src="images/checkcard1.png" alt="card1" class='offerpic'>
+        <img src="images/checkcard2.png" alt="card2" class='offerpic'>
+        <img src="images/checkcard4.jpg" alt="card4" class='offerpic'>
     </div>
-    <!-- <div class='cards'>
-        <img src="images/checkcard1.png" alt="card1" id='offerpic'>
-        <img src="images/checkcard2.png" alt="card2" id='offerpic'>
-        <img src="images/checkcard4.jpg" alt="card4" id='offerpic'>
-    <div class="cards">  
-        <p>Check Cards & Envelopes: <b>18 </b>for <b>$36</b></p>
-    </div> -->
-    </div>
+    
 </main>
 <footer>
     <div class='contact'>
         <h1>Contact Us</h1>
         <p>Phone: 561-998-3777</p>
-        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a></p>
+        <p>Email: <a class= 'footlink' href="mailto:stephanie@prettynpaper.com"  target="_top">Stephanie@prettynpaper.com</a><br><br></p>
     </div>
         
     <div class='address'>
         <h1>Location</h1>
         <p>7805 NW Beacon Square BLVD
         <br> Boca Raton, FL 33487</p>
-        <p class='plug'>Web Creation and Design by Victoria Engler</p>
+        <p class='plug'>Web Creation and Design by <b>Victoria Engler</b><br><br></p>
     </div>
+    <a href="" id='flip'>
+    <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front"> 
+                    <h2>Fill Out This Form to Inquire About An Appointment!</h2>  
+                </div>
+                    <div class="flip-card-back">
+                    <form action="https://formspree.io/mzbglzpg" method="POST">
+                    <fieldset>
+                    <legend>Appointment Inquiry Form</legend>
+                    
+                     <div class = "info">
+                        <label for ="name">Name:</label><input type="text" id='name' name="name" /> 
+                        <label for ="phone">Phone Number:</label><input type="text" id="phone" name ="phone" required/> 
+                        <label for ="message">Message:</label><textarea id = "message" ></textarea>
+                    </div>
+                    <input type="submit" value=" Submit Form"/>
+                </fieldset>     
+                </form>
+                      
+                    </div>
+                </div>
+              </div>
+              </a>
 </footer>
 </body>
 </html>
