@@ -105,17 +105,17 @@ main p, legend {
   } 
   
 
-.container, .o-container{
+.container{
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(5x auto);
   grid-row-gap: 1px;
+  
+}
+.container, .o-container{
   background-color: rgb(255, 172, 186);
   grid-column: 1/-1;
   justify-content: center
-}
-.o-container{
-  grid-template-columns: 1fr 1fr;
 }
 
 .logo{
@@ -150,22 +150,15 @@ main p, legend {
   overflow: hidden;
 }
 
-.descript, .descript-pic, .canasta, .canasta-pic, #t-1{
+.descript, .descript-pic, #t-1{
   grid-row: 2/ span 1;
 }
 
-.services-pic, .services, .wine, .wine-pic, #best{
+.services-pic, .services,#best{
   grid-row: 3/ span 1
 }
-.products, .prod-pic, .cards, #jax{
+.products, .prod-pic, #jax{
   grid-row: 4/span 1
-}
-
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  grid-column: 1/-1;
 }
 
 
@@ -211,13 +204,6 @@ button{
 }
 
 
-.canasta-pic, .wine-pic{
-  grid-column: 1/span 1
-}
-.canasta, .wine{
-  grid-column: 2/span 1
-}
-
 .offerpic, .gallery >img{
   margin: 10px;
   max-width: 400px;
@@ -228,13 +214,16 @@ button{
 .deal > p, .cards > p, #galhead{
   background-color: rgba(255, 255, 255, 0.959);
   border: 5px solid black;
-  padding: 15px 15px 15px 15px;
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 10%;
   align-self: center;
   justify-content: center;
   font-size: 20px
 }
 
+.cards>p {
+  margin-bottom: 0
+}
 
 .gallery{
   min-height: 600px;
@@ -323,12 +312,6 @@ footer h1, h2, h3, p {
   
 }
 
-.flip-card:hover .flip-card-inner, .flip-card-back {
-  transform: rotateY(180deg);
-}
-#flip:focus .flip-card-inner, .flip-card-back {
-  transform: rotateY(180deg);
-} 
 
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -336,18 +319,6 @@ footer h1, h2, h3, p {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; 
-}
-
-.flip-card-front {
-  background:transparent;
-  color: black;
-  align-items: center;
-  justify-content: center;
-  background-image: url('../images/pnp_logo.jpeg');
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-  background-position: bottom
-  
 }
 
 
@@ -376,9 +347,10 @@ fieldset{
   grid-row-gap: 10px;
 }  
 
+
 input:focus {
   border: 2px solid black;
-  background: #ccccca}
+  background: #d6d6d4f5}
 
 input[type=submit]{
   border: 1px solid black;
@@ -392,7 +364,7 @@ input[type=submit]{
 }
 
 input, textarea, select{
-  background-color:#FFFFFF;
+  background-color:#d6d6d4f5;
 }
 
 @media screen and (prefers-reduce-motion: reduce){
@@ -404,26 +376,104 @@ input, textarea, select{
   }
 }
 
-@media screen and ( max-width: 800px) and (min-width: 650px){
-  nav ul, .cards{
+@media screen and ( max-width: 800px) and (min-width: 600px){
+  .cards{
     flex-direction: row
   }
+
+  nav ul{
+    text-align: left;
+    float: left;
+  }
+
+  .o-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5x auto)
+  }
+  .canasta-pic, .canasta{
+    grid-row:2
+  }
+  .wine, .wine-pic{
+    grid-row:3
+  }
+  .cards{
+    grid-row: 4;
+    grid-column: 1/-1
+  }
+  .canasta, .wine, .cards>p{
+    grid-column: 2/ span 1
+  }
+  .cards>img{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .cards >p{
+    padding: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+
 }
 
 @media screen and (min-width: 800px){
   main{
     zoom:120%;
   }
-
+.cards>img{
+  margin-left: 30%;
+  margin-right: 20%;
+}
   .gallery> img, .t-pic>img{
     margin: 10px;
     max-width: 500px;
     max-height: 300px;
   }
-  nav ul, .cards{
+  nav ul{
     flex-direction: row;
     
   }
+  .o-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5x auto)
+  }
+  .canasta-pic, .canasta{
+    grid-row:2
+  }
+  .cards >p{
+  padding: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
 
+  .wine, .wine-pic{
+    grid-row:3
+  }
+  .cards{
+    grid-row: 4;
+    grid-column: 1/-1
+  }
+  .canasta, .wine, .cards >p{
+    grid-column: 2/ -1
+  }
+  .flip-card:hover .flip-card-inner, .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .flip-card:focus .flip-card-inner, .flip-card-back {
+    transform: rotateY(180deg);
+  }  
+  .flip-card-front {
+    background:transparent;
+    color: black;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    background-image: url('../images/pnp_logo.jpeg');
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: bottom
+    
+  }
 }
  
