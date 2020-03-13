@@ -367,7 +367,7 @@ input, textarea, select{
   background-color:#d6d6d4f5;
 }
 
-@media screen and (prefers-reduce-motion: reduce){
+@media screen and (prefers-reduced-motion: reduce){
   .gallery > img:hover{
     filter: none
   }
