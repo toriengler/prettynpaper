@@ -371,8 +371,10 @@ input, textarea, select{
   .gallery > img:hover{
     filter: none
   }
-  .logo{
+    .logo{
     animation: none;
+    animation-fill-mode: none;
+    animation-iteration-count: none;
   }
 }
 
